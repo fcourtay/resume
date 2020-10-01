@@ -1,9 +1,9 @@
 # FLORENT COURTAY
 
-126 Rue Legendre
-75017 Paris, France
-florent.courtay@gmail.com  
-+33 7 49 35 47 78
+126 Rue Legendre  
+75017 Paris, France  
+florent.courtay@gmail.com   
++33 7 49 35 47 78  
 
 ### SUMMARY:
 
