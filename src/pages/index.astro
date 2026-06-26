@@ -1,0 +1,22 @@
+---
+import '../styles/global.css';
+import { Content as ResumeContent } from '../content/resume.md';
+---
+
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="https://florent.courtay.net/user/themes/antimatter/images/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Florent Courtay - Resume</title>
+		<meta name="description" content="Florent Courtay - Resume" />
+	</head>
+	<body>
+		<main class="max-w-4xl mx-auto px-6 py-10 md:py-16">
+			<article class="prose prose-slate mx-auto">
+				<ResumeContent />
+			</article>
+		</main>
+	</body>
+</html>

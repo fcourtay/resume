@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #ffffff;
+    color: #333333;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
+/* Custom resume prose adjustments */
+.prose {
+  max-width: 58rem !important; /* Elegant maximum block width like original CV */
+  color: #313131 !important;
+}
+
+.prose h1 {
+  font-size: 2.25rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+  color: #111111 !important;
+}
+
+.prose h3 {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  color: #4b5563 !important;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.25rem;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  letter-spacing: 0.05em;
+}
+
+.prose h4 {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: #111111 !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.prose p {
+  margin-bottom: 0.5rem !important;
+  line-height: 1.6 !important;
+}
+
+.prose ul {
+  list-style-type: square !important;
+  padding-left: 1.5rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.prose li {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+  line-height: 1.5 !important;
+}
+
+.prose strong {
+  color: #111111 !important;
+  font-weight: 700 !important;
+}
+
+.prose em {
+  font-style: italic !important;
+}
+
+.prose a {
+  color: #2563eb !important;
+  text-decoration: none !important;
+  transition: color 0.15s ease-in-out;
+}
+
+.prose a:hover {
+  text-decoration: underline !important;
+  color: #1d4ed8 !important;
+}
+
+/* Specific styling for dates/locations usually found on the same line in h4 or custom elements */
+.prose h4 em {
+  font-size: 0.95rem;
+  color: #4b5563;
+  font-weight: normal;
+}
