@@ -1,37 +1,45 @@
 # FLORENT COURTAY
 
-126 Rue Legendre  
-75017 Paris, France  
-florent.courtay@gmail.com   
+
+[florent@courtay.net  ](mailto:florent@courtay.net)  
 +33 7 49 35 47 78  
 
 ### SUMMARY:
 
-- _IT professional with 15 + years of experience._
+- _IT and Pre-Sales professional with 15 + years of experience._
 - _GCP and Azure Certified, Cloud Architect_
 - _Strong technical background, from support to systems administration and Cloud infrastructure_
 - _Excellent communicator, English/French bilingual_
 
 ### TECHNICAL SUMMARY:
 
-* Systems: GCP, Azure and hybrid clouds architecture, K8s operation, Windows and Linux administration,
-AD management, Software and OS deployment and automation, Citrix environments, Hyper-V and
-VMware virtualization stacks, MS desktop suites, MS System Center
-* Networking : Firewalling, switching, routing, QoS, load balancing, VPNs, security
-* Languages: Powershell, Bash, Python
+**Cloud Platforms** : Google Cloud Platform (GCP), Microsoft Azure, Hybrid Cloud Architecture.  
+**Generative AI** : Agentic AI, Gemini Enterprise, Inference and Training, Sovereign MaaS.  
+**Architecture & DevOps** : AI/GenAI Architecture, Kubernetes (K8s) Operations, CI/CD Pipelines, Infrastructure as Code (IaC), Configuration Management, System Design & Automation.  
+**Systems & Networking** : Windows & Linux Administration, Active Directory, VMware & Hyper-V, Citrix, Firewalling, Switching, Routing, Load Balancing, VPNs, IT Security  
+**Languages** : Python, Bash, PowerShell.  
 
 ### PROFESSIONAL EXPERIENCE:
 #### Google France, Paris – France Jun. 2020 - Present
-**_Customer Engineer_**  
-Pre-sales - Infrastructure Modernisation
-Pre-sales - Application Modernisation
+**_Principal Architect_**  - 2022 - Present  
+**Owned strategic and technical outcomes** for a portfolio of large enterprise accounts, serving as the lead individual contributor responsible for translating ambiguous customer needs into actionable solutions.  
+**Defined and executed long-term architecture blueprints** and roadmaps, leveraging deep expertise in Google Cloud products to drive product adoption, optimization, and successful implementation.  
+**Led complex, high-value upsell opportunities** by identifying client objectives lacking clear precedent and designing novel technical solutions to help them meet or exceed critical KPIs.  
+**Secured technical wins** and ensured the success of the sales cycle by orchestrating cross-functional resources and acting as the primary technical owner for priority customer accounts.  
+**Influenced diverse executive-level stakeholders** with competing objectives, driving alignment on sales strategy, opportunity sizing, and implementation plans.  
+**Acted as the "go-to" industry expert** and trusted advisor, building deep advisory relationships and guiding customers on integration strategies, enterprise architecture, and platform infrastructure.  
+**Lead advisor on AI and Agentic Journey,** leveraging Google's AI Infrastructure and Gemini Enterprise to design, build, and deploy intelligent agents that automate complex business workflows. Arrchitected and planned Sovereign Managed Inference solutions, ensuring that highly regulated customers could leverage cutting-edge AI capabilities while meeting strict data residency, security, and digital sovereignty requirements.
+
+
+**_Customer Engineer_**   - 2020-2022  
+Financial Services Industry - Account Customer Engineer  
 
 #### CDW (Scalar Decisions, acquired), Toronto – Canada Oct. 2019 - Jun, 2020
 **_Cloud Solutions Architect_**  
-Cloud and Devops solutions architecture and design
-Cloud and DevOps projects effort estimation, presales
-Cloud Migrations architecture and implementation
-Hands-on Training sessions
+Cloud and Devops solutions architecture and design  
+Cloud and DevOps projects effort estimation, presales  
+Cloud Migrations architecture and implementation  
+Hands-on Training sessions  
 
 #### Sourced Group, Toronto – Canada Sep. 2018 - Oct. 2019
 **_Cloud Consultant_**  
@@ -131,8 +139,9 @@ Network multifunction printers deployment
 Load balancing solutions Study  
 User support  
 ### CERTIFICATIONS:
+- 2018 / 2021 /2023 / 2025 : Google Cloud Professional Architect
 - 2019: AZ-300: Microsoft Azure Architect Technologies
-- 2018: Google Cloud Professional Architect
+
 
 ### EDUCATION:
 - 2006 - 2009: EPSI Arras engineering school (A level +5)
