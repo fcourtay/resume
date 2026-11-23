@@ -4,7 +4,7 @@ Lightweight static resume built with [Astro](https://astro.build) and [Tailwind 
 
 ## Editing the Resume
 
-Update [src/content/resume.md](src/content/resume.md) with any content changes. Styling, dark mode, and print/PDF layout are defined in [src/styles/global.css](src/styles/global.css) and [src/pages/index.astro](src/pages/index.astro).
+Update [src/content/resume.en.md](src/content/resume.en.md) (English, served at `/`) and [src/content/resume.fr.md](src/content/resume.fr.md) (French, served at `/fr/`) with any content changes. Styling, dark mode, language switcher, and print/PDF layout are defined in [src/styles/global.css](src/styles/global.css) and [src/components/ResumePage.astro](src/components/ResumePage.astro).
 
 ## Local Development
 

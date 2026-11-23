@@ -1,0 +1,95 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	lang: 'en' | 'fr';
+}
+
+const { lang } = Astro.props;
+
+const copy = {
+	en: {
+		title: 'Florent Courtay - Resume',
+		description:
+			'Florent Courtay — Principal Architect specializing in Cloud Infrastructure, Google Cloud, Azure, and Generative AI.',
+		ogLocale: 'en_US',
+		printLabel: 'Print / Save PDF',
+		langSwitcherLabel: 'Language selector',
+	},
+	fr: {
+		title: 'Florent Courtay - CV',
+		description:
+			'Florent Courtay — Principal Architect spécialisé en infrastructure Cloud, Google Cloud, Azure et IA Générative.',
+		ogLocale: 'fr_FR',
+		printLabel: 'Imprimer / Enregistrer en PDF',
+		langSwitcherLabel: 'Sélecteur de langue',
+	},
+}[lang];
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{copy.title}</title>
+		<meta name="description" content={copy.description} />
+		<meta property="og:title" content={copy.title} />
+		<meta property="og:description" content={copy.description} />
+		<meta property="og:type" content="profile" />
+		<meta property="og:locale" content={copy.ogLocale} />
+		<link rel="alternate" hreflang="en" href="/" />
+		<link rel="alternate" hreflang="fr" href="/fr/" />
+		<link rel="alternate" hreflang="x-default" href="/" />
+	</head>
+	<body>
+		<main class="max-w-4xl mx-auto px-6 py-10 md:py-16 print:max-w-none print:p-0">
+			<div class="flex items-center justify-end gap-2 mb-4 print:hidden">
+				<nav
+					aria-label={copy.langSwitcherLabel}
+					class="inline-flex items-center rounded-md border border-slate-300 dark:border-slate-700 text-xs font-medium overflow-hidden"
+				>
+					<a
+						href="/"
+						hreflang="en"
+						aria-current={lang === 'en' ? 'page' : undefined}
+						class:list={[
+							'px-2.5 py-1.5 transition-colors',
+							lang === 'en'
+								? 'bg-slate-800 text-white dark:bg-slate-200 dark:text-slate-900'
+								: 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800',
+						]}
+					>
+						EN
+					</a>
+					<span aria-hidden="true" class="h-4 w-px bg-slate-300 dark:bg-slate-700"></span>
+					<a
+						href="/fr/"
+						hreflang="fr"
+						aria-current={lang === 'fr' ? 'page' : undefined}
+						class:list={[
+							'px-2.5 py-1.5 transition-colors',
+							lang === 'fr'
+								? 'bg-slate-800 text-white dark:bg-slate-200 dark:text-slate-900'
+								: 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800',
+						]}
+					>
+						FR
+					</a>
+				</nav>
+				<button
+					type="button"
+					onclick="window.print()"
+					class="inline-flex items-center gap-1.5 rounded-md border border-slate-300 dark:border-slate-700 px-3 py-1.5 text-xs font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+				>
+					{copy.printLabel}
+				</button>
+			</div>
+			<article class="resume mx-auto">
+				<slot />
+			</article>
+		</main>
+	</body>
+</html>
