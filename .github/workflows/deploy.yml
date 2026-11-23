@@ -11,6 +11,10 @@ on:
       - master
   workflow_dispatch:
 
+concurrency:
+  group: deploy-resume-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
@@ -55,3 +59,18 @@ jobs:
             ${{ steps.repository-info.outputs.image_name }}:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+  deploy:
+    needs: build-and-push
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: [self-hosted, dockercrocs]
+    environment: production
+    permissions:
+      contents: none
+
+    steps:
+      - name: Pull and recreate container
+        run: |
+          docker compose -f /home/docker/resume/docker-compose.yml pull
+          docker compose -f /home/docker/resume/docker-compose.yml up -d
+          docker image prune -f
