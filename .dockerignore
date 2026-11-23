@@ -6,4 +6,6 @@ dist
 .gitignore
 Dockerfile
 .github
-*.md
+README.md
+AGENTS.md
+CLAUDE.md

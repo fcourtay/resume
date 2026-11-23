@@ -1,43 +1,27 @@
-# Astro Starter Kit: Minimal
+# Florent Courtay — Resume
+
+Lightweight static resume built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com), packaged in an Nginx Alpine container.
+
+## Editing the Resume
+
+Update [src/content/resume.md](src/content/resume.md) with any content changes. Styling, dark mode, and print/PDF layout are defined in [src/styles/global.css](src/styles/global.css) and [src/pages/index.astro](src/pages/index.astro).
+
+## Local Development
+
+Requires Node.js `>=22.12.0`.
 
 ```sh
-npm create astro@latest -- --template minimal
+npm install
+npm run dev       # Start dev server at http://localhost:4321
+npm run build     # Build static site to ./dist
+npm run preview   # Preview production build locally
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Docker
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```sh
+docker build -t resume .
+docker run --rm -p 8080:80 resume
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Pushes to `main` automatically build and publish multi-arch (`linux/amd64`, `linux/arm64`) images to `ghcr.io/fcourtay/resume-cv`.
