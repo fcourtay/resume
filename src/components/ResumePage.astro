@@ -13,7 +13,8 @@ const copy = {
 		description:
 			'Florent Courtay — Principal Architect specializing in Cloud Infrastructure, Google Cloud, Azure, and Generative AI.',
 		ogLocale: 'en_US',
-		printLabel: 'Print / Save PDF',
+		printLabel: 'PDF',
+		printAriaLabel: 'Print / Save PDF',
 		langSwitcherLabel: 'Language selector',
 	},
 	fr: {
@@ -21,7 +22,8 @@ const copy = {
 		description:
 			'Florent Courtay — Principal Architect spécialisé en infrastructure Cloud, Google Cloud, Azure et IA Générative.',
 		ogLocale: 'fr_FR',
-		printLabel: 'Imprimer / Enregistrer en PDF',
+		printLabel: 'PDF',
+		printAriaLabel: 'Imprimer / Enregistrer en PDF',
 		langSwitcherLabel: 'Sélecteur de langue',
 	},
 }[lang];
@@ -82,6 +84,7 @@ const copy = {
 				<button
 					type="button"
 					onclick="window.print()"
+					aria-label={copy.printAriaLabel}
 					class="inline-flex items-center gap-1.5 rounded-md border border-slate-300 dark:border-slate-700 px-3 py-1.5 text-xs font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
 				>
 					{copy.printLabel}
