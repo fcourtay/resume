@@ -14,7 +14,7 @@
 
 - **Cloud Platforms:** Google Cloud Platform (GCP), Microsoft Azure, Hybrid Cloud Architecture.
 - **Generative AI:** Agentic AI, Gemini Enterprise, Inference and Training, Sovereign MaaS.
-- **Architecture & DevOps:** AI/GenAI Architecture, Kubernetes (K8s) Operations, CI/CD Pipelines, Infrastructure as Code (IaC), Configuration Management, System Design & Automation.
+- **Architecture & DevOps:** AI/GenAI & Agentic Architecture, Kubernetes (K8s) Operations, CI/CD Pipelines, Infrastructure as Code (IaC), Configuration Management, System Design & Automation.
 - **Systems & Networking:** Windows & Linux Administration, Active Directory, VMware & Hyper-V, Citrix, Firewalling, Switching, Routing, Load Balancing, VPNs, IT Security.
 - **Languages:** Python, Bash, PowerShell.
 
