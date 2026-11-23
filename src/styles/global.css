@@ -1,89 +1,160 @@
 @import "tailwindcss";
 
+:root {
+  --bg: #ffffff;
+  --text: #313131;
+  --heading: #111827;
+  --muted: #4b5563;
+  --border: #e5e7eb;
+  --link: #2563eb;
+  --link-hover: #1d4ed8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f172a;
+    --text: #cbd5e1;
+    --heading: #f8fafc;
+    --muted: #94a3b8;
+    --border: #334155;
+    --link: #60a5fa;
+    --link-hover: #93c5fd;
+  }
+}
+
 @layer base {
   body {
-    background-color: #ffffff;
-    color: #333333;
+    background-color: var(--bg);
+    color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
 }
 
-/* Custom resume prose adjustments */
-.prose {
-  max-width: 58rem !important; /* Elegant maximum block width like original CV */
-  color: #313131 !important;
+/* Resume typography */
+.resume {
+  max-width: 58rem;
+  color: var(--text);
 }
 
-.prose h1 {
-  font-size: 2.25rem !important;
-  font-weight: 800 !important;
+.resume h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
   letter-spacing: -0.025em;
-  margin-top: 1.5rem !important;
-  margin-bottom: 0.5rem !important;
-  color: #111111 !important;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--heading);
 }
 
-.prose h3 {
-  font-size: 1.1rem !important;
-  font-weight: 700 !important;
+.resume h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
   text-transform: uppercase;
-  color: #4b5563 !important;
-  border-bottom: 2px solid #e5e7eb;
+  color: var(--muted);
+  border-bottom: 2px solid var(--border);
   padding-bottom: 0.25rem;
-  margin-top: 2rem !important;
-  margin-bottom: 1rem !important;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   letter-spacing: 0.05em;
 }
 
-.prose h4 {
-  font-size: 1.15rem !important;
-  font-weight: 700 !important;
-  color: #111111 !important;
-  margin-top: 1.5rem !important;
-  margin-bottom: 0.25rem !important;
+.resume h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--heading);
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
 }
 
-.prose p {
-  margin-bottom: 0.5rem !important;
-  line-height: 1.6 !important;
+.resume p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
 }
 
-.prose ul {
-  list-style-type: square !important;
-  padding-left: 1.5rem !important;
-  margin-top: 0.5rem !important;
-  margin-bottom: 1rem !important;
+.resume ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
 }
 
-.prose li {
-  margin-top: 0.25rem !important;
-  margin-bottom: 0.25rem !important;
-  line-height: 1.5 !important;
+.resume li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.55;
 }
 
-.prose strong {
-  color: #111111 !important;
-  font-weight: 700 !important;
+.resume strong {
+  color: var(--heading);
+  font-weight: 700;
 }
 
-.prose em {
-  font-style: italic !important;
+.resume em {
+  font-style: italic;
 }
 
-.prose a {
-  color: #2563eb !important;
-  text-decoration: none !important;
+.resume a {
+  color: var(--link);
+  text-decoration: none;
   transition: color 0.15s ease-in-out;
 }
 
-.prose a:hover {
-  text-decoration: underline !important;
-  color: #1d4ed8 !important;
+.resume a:hover {
+  text-decoration: underline;
+  color: var(--link-hover);
 }
 
-/* Specific styling for dates/locations usually found on the same line in h4 or custom elements */
-.prose h4 em {
+.resume h3 em {
   font-size: 0.95rem;
-  color: #4b5563;
+  color: var(--muted);
   font-weight: normal;
+}
+
+/* Print / PDF styles */
+@media print {
+  :root {
+    --bg: #ffffff;
+    --text: #1f2937;
+    --heading: #111827;
+    --muted: #4b5563;
+    --border: #d1d5db;
+    --link: #111827;
+    --link-hover: #111827;
+  }
+
+  @page {
+    margin: 1.2cm;
+  }
+
+  body {
+    font-size: 10pt;
+  }
+
+  .resume {
+    max-width: none;
+  }
+
+  .resume h1 {
+    font-size: 1.75rem;
+  }
+
+  .resume h2 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.6rem;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .resume h3 {
+    font-size: 1rem;
+    margin-top: 1rem;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .resume p,
+  .resume li {
+    line-height: 1.45;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 }
